@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fuel Cost Calculator</h1>
+        <form>
+            <label for="mileage">現在の燃費（km/l）:</label>
+            <input type="number" id="mileage"><br>
+
+            <label for="gasolineCost">1Lのガソリン代（円）:</label>
+            <input type="number" id="gasolineCost"><br>
+
+            <label for="electricityCost">1kWの電気代（円）:</label>
+            <input type="number" id="electricityCost"><br>
+
+            <label for="monthlyDistance">月の走行距離（km）:</label>
+            <input type="number" id="monthlyDistance"><br>
+
+            <button type="button" onclick="calculateCost()">計算</button>
+        </form>
+
+        <h2>結果</h2>
+        <p>１kmあたりのガソリン代: <span id="gasolineCostPerKm">-</span> 円</p>
+        <p>１kmあたりの電気代: <span id="electricityCostPerKm">-</span> 円</p>
+        <p>月の燃料代差額: <span id="fuelCostDifference">-</span> 円</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
