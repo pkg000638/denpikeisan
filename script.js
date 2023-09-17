@@ -1,6 +1,6 @@
 function calculateCost() {
     const recommendedCar = document.getElementById("recommendedCar").value;
-    const multiplicationFactor = parseFloat(document.getElementById("multiplicationFactor").value);
+    const catalogNotation = parseFloat(document.getElementById("catalogNotation").value); // カタログ表記の選択肢
     const mileage = parseFloat(document.getElementById("mileage").value);
     const gasolineCost = parseFloat(document.getElementById("gasolineCost").value);
     const electricityCost = parseFloat(document.getElementById("electricityCost").value);
@@ -19,7 +19,7 @@ function calculateCost() {
     }
 
     gasolineCostPerKm = gasolineCost / mileage;
-    electricityCostPerKm =  electricityCost / (variableValue * multiplicationFactor);
+    electricityCostPerKm = electricityCost / (variableValue * catalogNotation); // カタログ表記の選択肢による修正
     const fuelCostDifference = (electricityCostPerKm - gasolineCostPerKm) * monthlyDistance;
 
     document.getElementById("gasolineCostPerKm").textContent = gasolineCostPerKm.toFixed(2);
