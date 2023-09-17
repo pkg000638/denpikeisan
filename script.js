@@ -19,7 +19,7 @@ function calculateCost() {
     }
 
     gasolineCostPerKm = gasolineCost / mileage;
-    electricityCostPerKm = gasolineCost / (variableValue * multiplicationFactor);
+    electricityCostPerKm =  electricityCost / (variableValue * multiplicationFactor);
     const fuelCostDifference = (electricityCostPerKm - gasolineCostPerKm) * monthlyDistance;
 
     document.getElementById("gasolineCostPerKm").textContent = gasolineCostPerKm.toFixed(2);
